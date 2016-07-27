@@ -1,2 +1,6 @@
 elpa/
 \#*
+/smex-items
+/projectile-bookmarks.eld
+/auto-save-list
+/projectile.cache

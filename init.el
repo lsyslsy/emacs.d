@@ -14,3 +14,4 @@
  )
 
 (require 'init-linum-mode)
+(require 'init-smex)
