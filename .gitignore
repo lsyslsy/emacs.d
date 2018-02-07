@@ -5,3 +5,8 @@ elpa/
 /auto-save-list
 /projectile.cache
 /url
+/.python-environments
+/ac-comphist.dat
+/ido.last
+/irony
+/bookmarks
