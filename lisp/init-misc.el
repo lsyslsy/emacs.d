@@ -12,6 +12,7 @@
 ; (require 'window-numbering)
 ; (window-numbering-mode 1)
 
+(scroll-bar-mode -1)
 ;; 自动从硬盘加载
 (global-auto-revert-mode t)
 (setq global-auto-revert-non-file-buffers t)
@@ -19,4 +20,10 @@
 (add-hook 'prog-mode-hook 'fic-mode)
 ;; show unncessary whitespace that can mess up your diff
 (add-hook 'prog-mode-hook (lambda () (interactive) (setq show-trailing-whitespace 1)))
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
+
+;; 关掉光标闪动，看起来确实有点不爽
+(if (fboundp 'blick-cursor-mode)
+    (blink-cursor-mode -1))
 (provide 'init-misc)
