@@ -1,4 +1,6 @@
 ;; 自动完成：company
+(use-package company
+  :ensure t)
 (add-hook 'after-init-hook 'global-company-mode); 全局开启
 ;(add-hook 'c++-mode-hook 'company-mode)
 ;(add-hook 'c-mode-hook 'company-mode)
