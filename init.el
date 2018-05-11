@@ -30,9 +30,6 @@
 ;; 默认setq-default设置默认值，buffer自己的local值会覆盖着
 (setq-default indent-tabs-mode nil)
 
-;;; 设置返回到上次跳转之前设置的mark
-(global-set-key "\M-," 'pop-tag-mark)
-
 ;;; occur命令，显示buffer内所有的匹配
 (global-set-key "\C-co" 'occur)
 
