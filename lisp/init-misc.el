@@ -7,7 +7,7 @@
 (setq default-buffer-file-coding-system 'utf-8)
 
 ;; tab set 4 space
-(setq tab-width 4)
+(setq-default tab-width 4)
 
 ; (require 'window-numbering)
 ; (window-numbering-mode 1)
@@ -28,4 +28,5 @@
   (exec-path-from-shell-initialize))
 ;; youdao dictionary key binding
 (global-set-key (kbd "C-c y") 'youdao-dictionary-search-at-point)
+
 (provide 'init-misc)
