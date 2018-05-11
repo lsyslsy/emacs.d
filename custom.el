@@ -16,7 +16,7 @@
  '(flycheck-pylintrc "~/lx/development/server/yao.lint")
  '(package-selected-packages
    (quote
-    (ag helm-projectile color-theme-sanityinc-solarized flycheck cmake-ide color-theme-sanityinc-tomorrow elpy exec-path-from-shell jedi projectile smex)))
+    (pyenv use-package helm-ag helm-swoop ag helm-projectile color-theme-sanityinc-solarized flycheck cmake-ide color-theme-sanityinc-tomorrow elpy exec-path-from-shell jedi projectile smex)))
  '(projectile-completion-system (quote helm))
  '(projectile-indexing-method (quote alien))
  '(safe-local-variable-values
@@ -24,7 +24,7 @@
     ((projectile-enable-caching . t)
      (ffip-find-options . "-not -size +64k -not -iwholename '~/LX/development/server/*'")
      (ffip-project-root . "~/lx/development/server")
-     (ffip-patterns . ("*.py" "*.cs"))))))
+     (ffip-patterns "*.py" "*.cs")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

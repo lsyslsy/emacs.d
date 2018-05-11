@@ -1,14 +1,25 @@
 ;; 设置碰到错误进入debug
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (setq debug-on-error t)
 ;; This is only needed once, near the top of the file
 
-(package-initialize)
-
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
-;(eval-when-compile
- ; (require 'use-package))
-
 (require 'init-elpa)
+
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+(eval-when-compile
+  (require 'use-package))
+; (use-package ag
+; 	:ensure t)
+
 (require 'init-misc)
 (require 'init-linum-mode)
 (require 'init-ido)

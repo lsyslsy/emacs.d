@@ -16,6 +16,8 @@
 ;; 自动从硬盘加载
 (global-auto-revert-mode t)
 (setq global-auto-revert-non-file-buffers t)
+(use-package fic-mode
+  :ensure t)
 (require 'fic-mode)
 (add-hook 'prog-mode-hook 'fic-mode)
 ;; show unncessary whitespace that can mess up your diff
@@ -23,10 +25,16 @@
 ;; 下面会显著增加启动时间，大约1.4s
 (when (memq window-system '(mac ns x))
   ; 设成nil 则不从 .zshrc 读 只从 .zshenv读（可以加快速度，但是需要你将环境变量相关的都放到 .zshenv 中，而非 .zshrc 中）
-  (setq exec-path-from-shell-check-startup-files nil) ;
-  (setq exec-path-from-shell-arguments '("-l" )) ;remove -i read form .zshenv
-  (exec-path-from-shell-initialize))
+  (use-package exec-path-from-shell
+    :ensure t
+    :config
+    (setq exec-path-from-shell-check-startup-files nil) ;
+    (setq exec-path-from-shell-arguments '("-l" )) ;remove -i read form .zshenv
+    (exec-path-from-shell-initialize)))
 ;; youdao dictionary key binding
 (global-set-key (kbd "C-c y") 'youdao-dictionary-search-at-point)
 
+;color theme
+(use-package color-theme-sanityinc-solarized
+	:ensure t)
 (provide 'init-misc)

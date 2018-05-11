@@ -3,6 +3,12 @@
 ;	'("--virtual-env" "~/.virtualenvs/lx"))
 
 (with-eval-after-load 'python
+  (use-package elpy
+    :ensure t)
+  (use-package jedi
+    :ensure t)
+  (use-package pyvenv
+    :ensure t)
   (message "load python module start")
   (require 'jedi)
   (add-hook 'python-mode-hook
@@ -11,8 +17,12 @@
               (elpy-mode 1)
               (setq elpy-rpc-backend "jedi")
                                         ;(setq python-check-command "/usr/local/bin/flake8 --ignore=E501,E302,E231,W191,E128,E261,E251,E203,E303,E226")
-              (setq python-check-command "pylint --rcfile=~/lx/development/server/yao.lint")
-              (setq elpy-syntax-check-command "pylint --rcfile=~/lx/development/server/yao.lint")
+              (if (memq window-system '(mac ns x))
+                (progn
+                  (setq python-check-command "pylint --rcfile=~/lx/development/server/yao.lint")
+                  (setq elpy-syntax-check-command "pylint --rcfile=~/lx/development/server/yao.lint"))
+                (setq python-check-command "pylint")
+                (setq elpy-syntax-check-command "pylint"))
               (setq flycheck-highlighting-mode 'lines)
               (setq python-indent 4)
               (setq flycheck-idle-change-delay 5)

@@ -1,3 +1,7 @@
+(use-package ido
+  :ensure t)
+(use-package flx-ido
+  :ensure t)
 (require 'ido)
 (require 'flx-ido)
 (ido-mode 1)

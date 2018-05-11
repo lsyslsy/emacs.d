@@ -1,3 +1,5 @@
+(use-package flycheck
+  :ensure t)
 (add-hook 'c++-mode-hook 'flycheck-mode)
 (add-hook 'c-mode-hook 'flycheck-mode)
 ;; grammal check: flycheck
