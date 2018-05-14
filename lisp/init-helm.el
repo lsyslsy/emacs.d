@@ -30,9 +30,14 @@
 ;(helm-autoresize-mode 1)
 (use-package helm-projectile
   :ensure t)
+(use-package helm-ag
+  :ensure t)
 (require 'helm-projectile)
 (helm-projectile-on)
 
+
+(use-package helm-swoop
+  :ensure t)
 
 ; helm etags 
 (use-package helm-etags-plus
