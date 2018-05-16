@@ -1,5 +1,4 @@
-(use-package helm
-  :ensure t)
+(my-install-package 'helm)
 (require 'helm)
 (require 'helm-config)
 
@@ -28,20 +27,15 @@
 ;(setq helm-autoresize-max-height 0)
 ;(setq helm-autoresize-min-height 20)
 ;(helm-autoresize-mode 1)
-(use-package helm-projectile
-  :ensure t)
-(use-package helm-ag
-  :ensure t)
+(my-install-package 'helm-projectile)
+(my-install-package 'helm-ag)
 (require 'helm-projectile)
 (helm-projectile-on)
 
-
-(use-package helm-swoop
-  :ensure t)
+(my-install-package 'helm-swoop)
 
 ; helm etags 
-(use-package helm-etags-plus
-  :ensure t)
+(my-install-package 'helm-etags-plus)
 (require 'helm-etags-plus)
 (global-set-key "\M-." 'helm-etags-plus-select)
  ;;list all visited tags

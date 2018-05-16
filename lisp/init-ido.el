@@ -1,7 +1,5 @@
-(use-package ido
-  :ensure t)
-(use-package flx-ido
-  :ensure t)
+(my-install-package 'ido)
+(my-install-package 'flx-ido)
 (require 'ido)
 (require 'flx-ido)
 (ido-mode 1)

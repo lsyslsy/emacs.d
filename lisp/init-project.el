@@ -1,8 +1,7 @@
  ;;------------------------------------------------------------------
 ;;%% 包配置
 ;;------------------------------------------------------------------
-(use-package projectile
-  :ensure t)
+(my-install-package 'projectile)
 (projectile-global-mode)
 (setq projectile-completion-system 'helm)
  (defun neotree-project-dir ()

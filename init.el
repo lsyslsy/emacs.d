@@ -12,14 +12,17 @@
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 (require 'init-elpa)
 
-(unless (package-installed-p 'use-package)
-  (package-refresh-contents)
-  (package-install 'use-package))
-(eval-when-compile
-  (require 'use-package))
-; (use-package ag
-; 	:ensure t)
 
+(defun my-install-package (package-name)
+  (unless package-archive-contents
+    (package-refresh-contents))
+  (unless (package-installed-p package-name)
+    (message "start download package: %s" package-name)
+    (package-install package-name)
+    (message "finish install package: %s" package-name)
+    ))
+
+(my-install-package 'use-package)
 (require 'init-misc)
 (require 'init-linum-mode)
 (require 'init-ido)

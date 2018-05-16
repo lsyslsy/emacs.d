@@ -3,12 +3,10 @@
 ;	'("--virtual-env" "~/.virtualenvs/lx"))
 
 (with-eval-after-load 'python
-  (use-package elpy
-    :ensure t)
-  (use-package jedi
-    :ensure t)
-  (use-package pyvenv
-    :ensure t)
+  (my-install-package 'elpy)
+  (my-install-package 'jedi)
+  (my-install-package 'pyenv)
+  
   (message "load python module start")
   (require 'jedi)
   (add-hook 'python-mode-hook
