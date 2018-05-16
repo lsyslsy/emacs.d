@@ -5,7 +5,7 @@
 (with-eval-after-load 'python
   (my-install-package 'elpy)
   (my-install-package 'jedi)
-  (my-install-package 'pyenv)
+  (my-install-package 'pyvenv)
   
   (message "load python module start")
   (require 'jedi)
