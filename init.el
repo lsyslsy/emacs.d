@@ -10,6 +10,8 @@
 ;; This is only needed once, near the top of the file
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "site-lisp" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "emacs-application-framework" user-emacs-directory))
 (require 'init-elpa)
 
 
@@ -30,7 +32,9 @@
 (require 'init-magit)
 (require 'init-company)
 (require 'init-dired)
+(require 'init-lsp)
 (require 'init-python-mode)
+(require 'init-cquery)
 (require 'init-project)
 (require 'init-helm)
 ;(require 'init-helm-gtags)
@@ -39,6 +43,12 @@
 (require 'init-cmake-ide)
 (require 'init-flycheck)
 (require 'init-evil)
+(require 'lsy-mode)
+(require 'init-modeline)
+(require 'company-english-helper)
+(require 'init-yaolib)
+;(require 'eaf)
+(require 'init-markdown)
 
 ;;; 默认不用tab，因为tab宽度问题，可能会引来一系列问题
 ;; 默认setq-default设置默认值，buffer自己的local值会覆盖着
