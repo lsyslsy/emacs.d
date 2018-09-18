@@ -17,8 +17,6 @@
 (global-auto-revert-mode t)
 (setq global-auto-revert-non-file-buffers t)
 (my-install-package 'fic-mode)
-(require 'fic-mode)
-(add-hook 'prog-mode-hook 'fic-mode)
 ;; show unncessary whitespace that can mess up your diff
 (add-hook 'prog-mode-hook (lambda () (interactive) (setq show-trailing-whitespace 1)))
 ;; 下面会显著增加启动时间，大约1.4s
@@ -35,4 +33,10 @@
 
 ;color theme
 (my-install-package 'color-theme-sanityinc-solarized)
+(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+(add-to-list 'default-frame-alist '(ns-appearance . dark))
+; hide tool bar
+(tool-bar-mode -1)
+; stop create lockfile like .#
+(setq create-lockfiles nil)
 (provide 'init-misc)
