@@ -4,6 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(beacon-color "#c82829")
+ '(blink-cursor-mode nil)
  '(custom-enabled-themes (quote (sanityinc-solarized-dark)))
  '(custom-safe-themes
    (quote
@@ -16,7 +17,7 @@
  '(flycheck-pylintrc "~/lx/development/server/yao.lint")
  '(package-selected-packages
    (quote
-    (pyenv use-package helm-ag helm-swoop ag helm-projectile color-theme-sanityinc-solarized flycheck cmake-ide color-theme-sanityinc-tomorrow elpy exec-path-from-shell jedi projectile smex)))
+    (nov company-lsp evil lsp-java lsp-mode lsp-ui markdown-mode pdf-tools lsp-python helm-ag-r lua-mode pyenv use-package helm-ag helm-swoop ag helm-projectile color-theme-sanityinc-solarized flycheck cmake-ide color-theme-sanityinc-tomorrow elpy exec-path-from-shell jedi projectile smex)))
  '(projectile-completion-system (quote helm))
  '(projectile-indexing-method (quote alien))
  '(safe-local-variable-values
@@ -24,12 +25,11 @@
     ((projectile-enable-caching . t)
      (ffip-find-options . "-not -size +64k -not -iwholename '~/LX/development/server/*'")
      (ffip-project-root . "~/lx/development/server")
-     (ffip-patterns "*.py" "*.cs")))))
+     (ffip-patterns "*.py" "*.cs"))))
+ '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
-  (if (not window-system)
-    '(default ((t (:background "nil"))))  
-  '(default ((t (:inherit nil :stipple nil background nil :foreground nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :foundry "nil" :family "Monaco"))))))
+ '(default ((t (:inherit nil :stipple nil background nil :foreground nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :foundry "nil" :family "Monaco")))))

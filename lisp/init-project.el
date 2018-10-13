@@ -3,6 +3,7 @@
 ;;------------------------------------------------------------------
 (my-install-package 'projectile)
 (projectile-global-mode)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (setq projectile-completion-system 'helm)
  (defun neotree-project-dir ()
     "Open NeoTree using the git root."
