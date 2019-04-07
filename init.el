@@ -75,3 +75,6 @@
 (global-set-key (kbd "C-c M-i") 'helm-multi-swoop)
 (global-set-key (kbd "C-x M-i") 'helm-multi-swoop-all)
 
+(my-install-package 'doom-modeline)
+(require 'doom-modeline)
+(doom-modeline-init)

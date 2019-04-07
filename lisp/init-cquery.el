@@ -10,10 +10,10 @@
   (define-key lsp-ui-mode-map [remap xref-find-definitions] #'lsp-ui-peek-find-definitions)
   (define-key lsp-ui-mode-map [remap xref-find-references] #'lsp-ui-peek-find-references)
   ;; Alternatively, use lsp-ui-peek interface
-  (lsp-ui-peek-find-custom 'base "$cquery/base")
-  (lsp-ui-peek-find-custom 'callers "$cquery/callers")
-  (lsp-ui-peek-find-custom 'random "$cquery/random") ;; jump to a random declaratio
-  (lsp-ui-peek-find-workspace-symbol "pattern 0")
+  ;(lsp-ui-peek-find-custom 'base "$cquery/base")
+  ;(lsp-ui-peek-find-custom 'callers "$cquery/callers")
+  ;(lsp-ui-peek-find-custom 'random "$cquery/random") ;; jump to a random declaratio
+  ;(lsp-ui-peek-find-workspace-symbol "pattern 0")
 )
 
 (add-hook 'c-mode-hook #'cquery-enable)
